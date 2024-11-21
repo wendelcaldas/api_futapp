@@ -13,6 +13,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
+        var_dump('chegou na rota');exit;
         try {
 
             $request->validate([
