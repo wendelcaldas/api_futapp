@@ -13,7 +13,7 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        var_dump('chegou na rota');exit;
+        // var_dump('chegou na rota');exit;
         try {
 
             $request->validate([
@@ -88,7 +88,7 @@ class AuthController extends Controller
             }
 
             $token = $user->createToken('mobile_token')->plainTextToken;
-            var_dump($token);exit;
+            // var_dump($token);exit;
             return response()->json(['token' => $token, 'user' => $user]);
         } catch (ValidationException $e) {
             if ($e->errors()) {
